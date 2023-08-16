@@ -1,0 +1,11 @@
+
+<div class="card">
+  <img [src]="product.img" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{product.title}}</h5>
+    <p class="card-text">{{product.description}}</p>
+    <p class="card-text"><i>$ {{product.price}}</i></p>
+    <button class="btn btn-primary" *ngIf="!product.addedToCart" (click)="addToCart(product)">Agregar al carrito</button>
+    <button class="btn btn-secondary" *ngIf="product.addedToCart" (click)="addToCart(product)">Agregado</button>
+  </div>
+</div>

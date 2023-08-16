@@ -1,0 +1,15 @@
+
+
+.card {
+  img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+  }
+  .card-body {
+    .btn-primary {
+      background-color: #2cd1b1;
+      border-color: #2cd1b1;
+    }
+  }
+}

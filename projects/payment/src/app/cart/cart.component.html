@@ -1,0 +1,39 @@
+<div class="container" [ngStyle]="{'height': shoppingCart.length > 0 ? 'auto' : '90vh' }">
+  <br />
+  <div class="title" *ngIf="shoppingCart.length > 0">
+    <h2>Carrito de compras</h2>
+    <span>({{ shoppingCart.length }})</span>
+  </div>
+  <br />
+
+  <div *ngIf="shoppingCart.length > 0">
+    <div class="product" *ngFor="let product of shoppingCart">
+      <div class="img">
+        <img [src]="product.img" alt="" />
+      </div>
+
+      <div class="content">
+        <div class="title-product">
+          <p>{{ product.title }}</p>
+        </div>
+
+        <div class="description">
+          <p>{{ product.description }}</p>
+        </div>
+
+        <div class="options">
+          <button class="btn btn-outline-secondary" (click)="removeProduct(product)">Remover</button>
+          <button class="btn btn-primary">Comprar</button>
+        </div>
+      </div>
+
+      <div class="price">
+        <p>${{ product.price }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="no-data" *ngIf="shoppingCart.length <= 0">
+    <h2>No hay Productos en el carrito</h2>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+
+.container {
+  border: 4px dashed green;
+}

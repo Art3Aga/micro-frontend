@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "rastreogps-95229"
+  },
+  "targets": {
+    "rastreogps-95229": {
+      "hosting": {
+        "container": ["container"],
+        "shopping": ["shopping"],
+        "payment": ["payment"]
+      }
+    }
+  }
+}
